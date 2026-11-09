@@ -1,0 +1,83 @@
+{
+  "manifest_version": 3,
+  "name": "CKG Auto Importer & Pendaftaran",
+  "short_name": "CKG Importer",
+  "version": "3.0",
+  "description": "Pengolah Data Raw Universal, Standardisasi templates_excel & Otomasi Pendaftaran CKG Unattended.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "alarms",
+    "debugger",
+    "sidePanel",
+    "power",
+    "declarativeNetRequest",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://sehatindonesiaku.kemkes.go.id/*",
+    "https://form.kemkes.go.id/*",
+    "https://api-satusehat-mobile.kemkes.go.id/*"
+  ],
+  "action": {
+    "default_title": "Buka CKG Bulk Data & Pendaftaran",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sehatindonesiaku.kemkes.go.id/*",
+        "https://form.kemkes.go.id/*"
+      ],
+      "js": [
+        "src/interceptor.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://sehatindonesiaku.kemkes.go.id/*",
+        "https://form.kemkes.go.id/*"
+      ],
+      "js": [
+        "src/interceptor-relay.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "templates_excel/*",
+        "icons/*",
+        "lib/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

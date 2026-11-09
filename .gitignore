@@ -1,0 +1,25 @@
+# Scratch & temporary development scripts
+scratch/
+logs/
+template excel/
+*.bak
+*.tmp
+*.log
+
+# Sensitive or temporary audit dumps
+audit_bedah_ckg_result_*.json
+laporan_audit_*.json
+laporan_audit_*.txt
+laporan_bedah_*.txt
+laporan_deteksi_*.json
+scratch_login_screenshot.png
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class

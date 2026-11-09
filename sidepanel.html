@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CKG Auto Importer & Pendaftaran</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <link rel="stylesheet" href="santai.css">
+  <style>
+    /* Styling Khusus Tab Tunggal Pendaftaran */
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .app-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+    .app-title-clean {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #0369a1;
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+    }
+    .app-subtitle-clean {
+      font-size: 11px;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .badge-auto-ckg {
+      background: #e0f2fe;
+      color: #0284c7;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+    .clinical-banner {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-top: 10px;
+    }
+    .clinical-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .clinical-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .clinical-pill {
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      border: 1px solid #86efac;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .btn-action-primary-glow {
+      background: linear-gradient(135deg, #16a34a 0%, #0d9488 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      font-size: 13.5px !important;
+      padding: 11px 16px !important;
+      border-radius: 8px !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+      border: none !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-action-primary-glow:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4) !important;
+    }
+    .export-box {
+      margin-top: 10px;
+      padding: 9px 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 11.5px;
+    }
+    .export-buttons {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .btn-export-pill {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-export-pill:hover {
+      border-color: #0284c7;
+      color: #0284c7;
+      background: #f0f9ff;
+    }
+    .queue-exam-indicator {
+      font-size: 10px;
+      background: #f1f5f9;
+      color: #475569;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Terpadu -->
+    <header class="app-header">
+      <div class="app-brand">
+        <img src="icons/icon48.png" alt="CKG Logo" class="app-logo">
+        <div>
+          <div class="app-title-clean">
+            CKG AUTO IMPORTER &amp; PENDAFTARAN
+            <span class="badge-auto-ckg">v3.0</span>
+          </div>
+          <span class="app-subtitle-clean" id="unit-name">Auto-Entry SehatIndonesiaku</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <div class="unattended-pill" id="unattended-indicator" title="Mode Unattended: Otomasi berjalan mandiri & tahan sleep">
+          <span class="pulse-dot"></span>
+          <span class="unattended-text">Siap Entri</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Satu-Satunya Konten Utama: Pendaftaran & Otomasi CKG -->
+    <div id="tab-antrean" class="tab-pane active" style="padding-bottom: 24px;">
+      
+      <!-- Sticky Action Bar untuk Eksekusi Cepat -->
+      <section class="action-bar-sticky">
+        <button class="btn btn-primary btn-action-main btn-action-primary-glow" id="btn-start-queue">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>▶ MULAI SUNTIK DATA KE CKG</span>
+        </button>
+        <button class="btn btn-warning btn-action-half" id="btn-pause-queue" hidden>⏸ Jeda</button>
+        <button class="btn btn-success btn-action-half" id="btn-resume-queue" hidden>▶ Lanjutkan</button>
+        <button class="btn btn-danger btn-action-half" id="btn-stop-queue" hidden>⏹ Berhenti</button>
+        <button class="btn btn-secondary btn-action-secondary" id="btn-step-one" title="Jalankan hanya 1 peserta aktif ini saja">1-per-1</button>
+      </section>
+
+      <main class="app-content">
+        <!-- 1. Card Import Excel & Hasil Pemeriksaan -->
+        <section class="card">
+          <div class="card-header">
+            <h2 class="card-title">📁 Import Data Mentah &amp; Hasil Pemeriksaan</h2>
+            <span class="badge" id="detected-cat-badge">Otomatis</span>
+          </div>
+          <div class="card-body">
+            <input type="file" id="file-input" accept=".xlsx,.xls,.csv" multiple style="display: none;">
+            <div class="upload-dropzone" id="dropzone">
+              <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <p class="dropzone-label">Pilih atau Tarik File Excel / CSV (Mendukung Banyak File)</p>
+              <span class="dropzone-hint">Otomatis deteksi header &amp; satukan data ganda (Pelayanan ePuskesmas, BPJS, Posyandu, Sekolah)</span>
+              <button class="btn btn-outline" id="btn-browse" style="margin-top: 8px;">Pilih File Excel / CSV (Bisa Banyak)</button>
+            </div>
+
+            <!-- Banner Ringkasan Multi-File yang Tergabung -->
+            <div id="sp-multi-file-summary" class="multi-file-summary" style="display: none; margin-top: 10px; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 12px; font-size: 11.5px; color: #0f766e;">
+              <div style="font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+                <span>📂</span>
+                <span id="multi-file-title">Penggabungan Berkas Berhasil:</span>
+              </div>
+              <div id="multi-file-details" style="font-size: 11px; line-height: 1.4; color: #115e59;"></div>
+            </div>
+
+            <!-- Banner Hasil Pemeriksaan yang Berhasil Terbaca -->
+            <div id="sp-clinical-detected" class="clinical-banner" style="display: none;">
+              <div class="clinical-title">
+                <span>🩺</span>
+                <span id="sp-clinical-title-text">Hasil Pemeriksaan Lengkap Terbaca dari File:</span>
+              </div>
+              <div class="clinical-pills">
+                <span class="clinical-pill" id="sp-pill-anthro">✓ Fisik (BB &amp; TB)</span>
+                <span class="clinical-pill" id="sp-pill-tensi">✓ Tensi &amp; LP</span>
+                <span class="clinical-pill" id="sp-pill-lab">✓ Gula Darah &amp; Lab POCT</span>
+                <span class="clinical-pill" id="sp-pill-sensory">✓ Indera (Mata/Gigi/Telinga)</span>
+                <span class="clinical-pill" id="sp-pill-special">✓ Skrining Spesifik Kategori</span>
+              </div>
+            </div>
+
+            <!-- Selector Kategori CKG -->
+            <div class="category-selector-group" style="margin-top: 10px;">
+              <label class="input-label">Mode Deteksi Kategori Pasien:</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="data-category" value="AUTO" checked> <span>Auto Detect</span></label>
+                <label><input type="radio" name="data-category" value="BALITA"> <span>Balita</span></label>
+                <label><input type="radio" name="data-category" value="UMUM"> <span>Umum</span></label>
+                <label><input type="radio" name="data-category" value="SEKOLAH"> <span>Sekolah</span></label>
+              </div>
+            </div>
+
+            <!-- Download Official templates_excel Section -->
+            <div class="export-box">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 700; color: #334155;">📥 Format Standar templates_excel:</span>
+                <button id="btn-export-current-zip" class="btn-export-pill" style="color: #0284c7; border-color: #0284c7; font-weight: 700;">📦 Unduh ZIP Data Ini</button>
+              </div>
+              <div class="export-buttons">
+                <button class="btn-export-pill" id="btn-dl-master-umum">📑 Master Umum (.xlsx)</button>
+                <button class="btn-export-pill" id="btn-dl-master-sekolah">🏫 Master Sekolah (.xlsx)</button>
+                <button class="btn-export-pill" id="btn-dl-balita">👶 Balita (.xlsx)</button>
+                <button class="btn-export-pill" id="btn-dl-zip-all" style="color: #0284c7;">📦 Semua Template (.ZIP)</button>
+              </div>
+            </div>
+
+            <!-- Form Hardlock Data Wali Default (Mengisi otomatis jika data Excel butuh wali tapi kosong) -->
+            <div style="margin-top: 10px; padding: 10px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 11.5px; font-weight: 700; color: #92400e;">🔒 Hardlock Data Wali (Cadangan Balita & Lansia)</span>
+                <span id="hardlock-wali-saved-badge" style="font-size: 9.5px; padding: 1px 6px; border-radius: 99px; background: #f3f4f6; color: #6b7280; font-weight: 600;">Opsional</span>
+              </div>
+              <p style="font-size: 10.5px; color: #78350f; margin: 0 0 8px 0; line-height: 1.35;">
+                Jika di Excel sudah ada data Wali maka dipakai data Excel. Jika kosong pada peserta yang membutuhkan Wali (Balita & Lansia SehatIndonesiaku), otomatis diisi dengan data cadangan di bawah:
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                <div>
+                  <label style="font-size: 10px; font-weight: 600; color: #78350f; display: block; margin-bottom: 2px;">NIK Wali (16 Digit)</label>
+                  <input type="text" id="hardlock-wali-nik" maxlength="16" placeholder="16 Digit NIK Wali" value="" style="width: 100%; padding: 4px 6px; font-size: 11px; border: 1px solid #fcd34d; border-radius: 4px; background: #fff;">
+                </div>
+                <div>
+                  <label style="font-size: 10px; font-weight: 600; color: #78350f; display: block; margin-bottom: 2px;">Nama Lengkap Wali</label>
+                  <input type="text" id="hardlock-wali-nama" placeholder="Nama Lengkap Wali" value="" style="width: 100%; padding: 4px 6px; font-size: 11px; border: 1px solid #fcd34d; border-radius: 4px; background: #fff;">
+                </div>
+                <div>
+                  <label style="font-size: 10px; font-weight: 600; color: #78350f; display: block; margin-bottom: 2px;">Tgl Lahir Wali</label>
+                  <input type="date" id="hardlock-wali-tgllahir" value="" style="width: 100%; padding: 3px 6px; font-size: 11px; border: 1px solid #fcd34d; border-radius: 4px; background: #fff;">
+                </div>
+                <div>
+                  <label style="font-size: 10px; font-weight: 600; color: #78350f; display: block; margin-bottom: 2px;">Jenis Kelamin Wali</label>
+                  <select id="hardlock-wali-jk" style="width: 100%; padding: 3px 6px; font-size: 11px; border: 1px solid #fcd34d; border-radius: 4px; background: #fff;">
+                    <option value="" selected disabled>Pilih Jenis Kelamin</option>
+                    <option value="Perempuan">Perempuan</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                  </select>
+                </div>
+                <div style="grid-column: span 2; display: flex; gap: 6px; align-items: flex-end;">
+                  <div style="flex: 1;">
+                    <label style="font-size: 10px; font-weight: 600; color: #78350f; display: block; margin-bottom: 2px;">No. HP / WhatsApp Wali</label>
+                    <input type="text" id="hardlock-wali-hp" placeholder="08xxxxxxxxxx" value="" style="width: 100%; padding: 4px 6px; font-size: 11px; border: 1px solid #fcd34d; border-radius: 4px; background: #fff;">
+                  </div>
+                  <button type="button" class="btn btn-primary" id="btn-save-hardlock-wali" style="padding: 5px 10px; font-size: 10.5px; font-weight: 700; background: #d97706; border-color: #b45309; white-space: nowrap;">💾 Simpan Wali</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hardlock Pekerjaan (Cadangan Jika Sumber Data Kosong) -->
+            <div style="margin-top: 8px; padding: 10px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 11.5px; font-weight: 700; color: #166534;">💼 Hardlock Pekerjaan (Cadangan Jika Kolom Kosong)</span>
+                <span id="hardlock-pekerjaan-saved-badge" style="font-size: 9.5px; padding: 1px 6px; border-radius: 99px; background: #dcfce7; color: #15803d; font-weight: 600;">Aktif</span>
+              </div>
+              <p style="font-size: 10.5px; color: #14532d; margin: 0 0 8px 0; line-height: 1.35;">
+                Jika di data mentah RME / Excel kolom Pekerjaan kosong, otomatis diisi dengan pilihan Hardlock berikut agar pendaftaran satset &amp; tidak tertahan modal:
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                <div>
+                  <label style="font-size: 10px; font-weight: 600; color: #14532d; display: block; margin-bottom: 2px;">Pekerjaan Utama (Default)</label>
+                  <select id="hardlock-pekerjaan-default" style="width: 100%; padding: 4px 6px; font-size: 11px; border: 1px solid #86efac; border-radius: 4px; background: #fff;">
+                    <option value="Belum/Tidak Bekerja" selected>Belum/Tidak Bekerja</option>
+                    <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+                    <option value="Pegawai Swasta">Pegawai Swasta</option>
+                    <option value="Wiraswasta / Pedagang">Wiraswasta / Pedagang</option>
+                    <option value="Petani / Nelayan / Buruh">Petani / Nelayan / Buruh</option>
+                    <option value="Mahasiswa">Mahasiswa / Pelajar</option>
+                    <option value="ASN (Kantor Pemerintah)">ASN (Kantor Pemerintah)</option>
+                    <option value="TNI">TNI</option>
+                    <option value="POLRI">POLRI</option>
+                    <option value="Dokter Internship">Dokter Internship</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-size: 10px; font-weight: 600; color: #14532d; display: block; margin-bottom: 2px;">Khusus Perempuan Dewasa</label>
+                  <select id="hardlock-pekerjaan-perempuan" style="width: 100%; padding: 4px 6px; font-size: 11px; border: 1px solid #86efac; border-radius: 4px; background: #fff;">
+                    <option value="Ibu Rumah Tangga" selected>Ibu Rumah Tangga</option>
+                    <option value="Belum/Tidak Bekerja">Belum/Tidak Bekerja</option>
+                    <option value="Pegawai Swasta">Pegawai Swasta</option>
+                    <option value="Wiraswasta / Pedagang">Wiraswasta / Pedagang</option>
+                    <option value="SAMA_DENGAN_DEFAULT">Sama dengan Default Utama</option>
+                  </select>
+                </div>
+                <div style="grid-column: span 2; display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                  <label style="display: flex; align-items: center; gap: 4px; font-size: 10.5px; color: #14532d; cursor: pointer;">
+                    <input type="checkbox" id="hardlock-pekerjaan-auto-smart" checked>
+                    <span>Otomatis sesuaikan usia &amp; JK (Anak ➔ Pelajar, Wanita ➔ IRT)</span>
+                  </label>
+                  <button type="button" class="btn btn-primary" id="btn-save-hardlock-pekerjaan" style="padding: 4px 10px; font-size: 10.5px; font-weight: 700; background: #16a34a; border-color: #15803d; white-space: nowrap;">💾 Simpan Pekerjaan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Card Statistik Antrean -->
+        <section class="card">
+          <div class="card-header">
+            <h2 class="card-title">📊 Status Antrean Pendaftaran</h2>
+            <span class="batch-name" id="current-batch-name">Belum ada batch</span>
+          </div>
+          <div class="card-body">
+            <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr); gap: 6px;">
+              <div class="stat-box">
+                <span class="stat-value" id="stat-total">0</span>
+                <span class="stat-label">Total</span>
+              </div>
+              <div class="stat-box text-success">
+                <span class="stat-value" id="stat-completed">0</span>
+                <span class="stat-label">Tiket / Hadir</span>
+              </div>
+              <div class="stat-box" style="color: #6366f1;">
+                <span class="stat-value" id="stat-already-screened">0</span>
+                <span class="stat-label">Sudah di CKG</span>
+              </div>
+              <div class="stat-box text-primary">
+                <span class="stat-value" id="stat-ready">0</span>
+                <span class="stat-label">Siap Entri</span>
+              </div>
+              <div class="stat-box text-warning">
+                <span class="stat-value" id="stat-progress">0</span>
+                <span class="stat-label">Proses</span>
+              </div>
+              <div class="stat-box text-danger">
+                <span class="stat-value" id="stat-invalid">0</span>
+                <span class="stat-label">Tidak Valid</span>
+              </div>
+              <div class="stat-box text-danger" style="background: #fef2f2; border-color: #fecaca;">
+                <span class="stat-value" id="stat-error" style="color: #dc2626;">0</span>
+                <span class="stat-label" style="color: #dc2626;">Error</span>
+              </div>
+            </div>
+
+            <!-- Filter Tampilan Data Pendaftaran & Tombol Restart Error -->
+            <div style="display: flex; gap: 4px; margin-top: 10px; margin-bottom: 4px; flex-wrap: wrap; align-items: center;">
+              <button class="btn-filter-queue active" data-filter="ALL" style="padding: 3px 8px; font-size: 11px;">Semua</button>
+              <button class="btn-filter-queue" data-filter="READY" style="padding: 3px 8px; font-size: 11px;">Siap Entri</button>
+              <button class="btn-filter-queue" data-filter="COMPLETED" style="padding: 3px 8px; font-size: 11px;">Selesai</button>
+              <button class="btn-filter-queue" data-filter="ERROR" style="padding: 3px 8px; font-size: 11px;">Error</button>
+              <button class="btn-filter-queue" data-filter="INVALID" style="padding: 3px 8px; font-size: 11px;">Tidak Valid</button>
+              <button class="btn btn-warning" id="btn-restart-error" style="padding: 3px 8px; font-size: 11px; margin-left: auto;">
+                🔄 Ulangi Error
+              </button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-wrap" style="margin-top: 8px;">
+              <div class="progress-bar-fill" id="progress-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Card Peserta Aktif yang Sedang Diproses -->
+        <section class="card active-participant-card" id="card-active-participant">
+          <div class="card-header">
+            <h2 class="card-title">⚡ Peserta Sedang Diproses</h2>
+            <span class="active-badge" id="active-participant-stage">STANDBY</span>
+          </div>
+          <div class="card-body">
+            <div class="active-participant-info">
+              <div class="info-row"><span class="info-label">Nama:</span> <span class="info-value font-bold" id="p-active-name">—</span></div>
+              <div class="info-row"><span class="info-label">NIK:</span> <span class="info-value" id="p-active-nik">—</span></div>
+              <div class="info-row"><span class="info-label">No. Tiket:</span> <span class="info-value" id="p-active-ticket">—</span></div>
+              <div class="info-row"><span class="info-label">Kategori:</span> <span class="info-value" id="p-active-category">—</span></div>
+            </div>
+
+            <!-- Stepper Visual -->
+            <div class="stepper-pipeline">
+              <div class="step-node" id="step-reg"><span class="step-icon">1</span><span class="step-text">Daftar</span></div>
+              <div class="step-connector"></div>
+              <div class="step-node" id="step-hadir"><span class="step-icon">2</span><span class="step-text">Hadir</span></div>
+              <div class="step-connector"></div>
+              <div class="step-node" id="step-exam"><span class="step-icon">3</span><span class="step-text">Pemeriksaan</span></div>
+              <div class="step-connector"></div>
+              <div class="step-node" id="step-done"><span class="step-icon">4</span><span class="step-text">Selesai</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Card Antrean Peserta -->
+        <section class="card">
+          <div class="card-header">
+            <h2 class="card-title">📋 Antrean Pendaftaran Peserta</h2>
+            <div class="card-actions">
+              <button class="btn-text text-danger" id="btn-clear-queue">Hapus Antrean</button>
+            </div>
+          </div>
+          <div class="card-body queue-list-wrap">
+            <ul class="queue-list" id="queue-items-container">
+              <li class="empty-list-placeholder">Belum ada file Excel yang diunggah.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 5. Live Log Terminal -->
+        <section class="card terminal-card">
+          <div class="card-header">
+            <h2 class="card-title">🖥️ Log Eksekusi Otomasi</h2>
+            <button class="btn-text" id="btn-clear-logs">Bersihkan</button>
+          </div>
+          <div class="card-body">
+            <div class="terminal-logs" id="terminal-logs">
+              <div class="log-line text-muted">[Sistem] Menunggu file Excel Anda...</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  
+
+  <script src="lib/xlsx.full.min.js"></script>
+  <script src="lib/jszip.min.js"></script>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

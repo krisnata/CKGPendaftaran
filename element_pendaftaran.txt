@@ -1,0 +1,405 @@
+========================================================
+      HASIL OTOMASI & INSPEKSI LAYAR CKG               
+========================================================
+
+--- STATUS TIKET & PENDAFTARAN PASIEN ---
+NIK: 5201032006870002 | Nama: Supardianto | STATUS: MANUAL INTERVENTION / OK
+NIK: 5201032006950003 | Nama: Mursin | STATUS: MANUAL INTERVENTION / OK
+
+--------------------------------------------------------
+--- LOG DETEKSI SELURUH ELEMEN & TEKS LAYAR (INSPECTOR) ---
+--------------------------------------------------------
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Cetak QR Screening | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Daftar Baru | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Ganti Tanggal | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Keluar | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Rizki Wahyudi Puskesmas Sedau | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Manual Inspector - Mursin] Tag: button | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Manual Inspector - Mursin] Tag: div | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: > | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Cari/Daftarkan Individu | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Cek Kesehatan Gratis | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Manual Inspector - Mursin] Tag: span | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Cetak QR Screening | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Daftar Baru | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Ganti Tanggal | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Keluar | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Rizki Wahyudi Puskesmas Sedau | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Manual Inspector - Supardianto] Tag: button | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Manual Inspector - Supardianto] Tag: div | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: > | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Cari/Daftarkan Individu | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Cek Kesehatan Gratis | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Manual Inspector - Supardianto] Tag: span | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Cetak QR Screening | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Daftar Baru | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Ganti Tanggal | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Keluar | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Rizki Wahyudi Puskesmas Sedau | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: button | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: div | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: > | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Cari/Daftarkan Individu | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Cek Kesehatan Gratis | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Pendaftaran Utama - Mursin] Tag: span | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Cetak QR Screening | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Daftar Baru | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Ganti Tanggal | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Keluar | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Rizki Wahyudi Puskesmas Sedau | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: button | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: div | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: > | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Cari/Daftarkan Individu | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Cek Kesehatan Gratis | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Pendaftaran Utama - Supardianto] Tag: span | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 1 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 10 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 11 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 12 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 13 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 14 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 15 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 16 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 17 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 18 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 19 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 2 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 20 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 2026 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 21 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 22 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 23 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 24 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 25 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 26 900 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 27 900 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 28 900 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 29 900 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 3 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 30 900 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 4 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 5 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 6 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 7 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 8 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: 9 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Cek NIK | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Cetak QR Screening | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Daftar Baru | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Ganti Tanggal | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Keluar | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Rizki Wahyudi Puskesmas Sedau | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Sep | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: button | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: div | ID: Tanpa ID | Text: Lihat Petunjuk Pengisian Nama | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: div | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: div | ID: Tanpa ID | Text: Pilih jenis kelamin | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: label | ID: Tanpa ID | Text: NIK * | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: label | ID: Tanpa ID | Text: Nama Lengkap * | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: label | ID: Tanpa ID | Text: No. Whatsapp Aktif * +62 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: * | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 0 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 1 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 10 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 11 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 12 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 13 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 14 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 15 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 16 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 17 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 18 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 19 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 2 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 20 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 21 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 22 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 23 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 24 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 25 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 26 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 27 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 28 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 29 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 3 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 30 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 31 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 4 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 5 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 6 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 7 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 8 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 9 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: 900 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: > | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Cari/Daftarkan Individu | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Cek Kesehatan Gratis | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Jum | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Kam | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Min | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Pilih jenis kelamin | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Rab | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Sab | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Sel | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Sen | Placeholder: 
+[Setelah Cek NIK - Mursin] Tag: span | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 1 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 10 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 11 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 12 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 13 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 14 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 15 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 16 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 17 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 18 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 19 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 2 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 20 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 2026 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 21 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 22 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 23 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 24 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 25 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 26 900 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 27 900 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 28 900 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 29 900 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 3 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 30 900 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 4 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 5 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 6 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 7 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 8 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: 9 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Cetak QR Screening | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Daftar Baru | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Ganti Tanggal | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Keluar | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Rizki Wahyudi Puskesmas Sedau | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Selanjutnya | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Sep | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: button | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: div | ID: Tanpa ID | Text: Lihat Petunjuk Pengisian Nama | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: div | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: div | ID: Tanpa ID | Text: Pilih jenis kelamin | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: label | ID: Tanpa ID | Text: NIK * | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: label | ID: Tanpa ID | Text: Nama Lengkap * | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: label | ID: Tanpa ID | Text: No. Whatsapp Aktif * +62 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: * | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 0 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 1 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 10 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 11 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 12 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 13 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 14 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 15 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 16 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 17 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 18 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 19 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 2 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 20 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 21 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 22 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 23 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 24 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 25 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 26 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 27 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 28 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 29 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 3 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 30 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 31 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 4 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 5 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 6 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 7 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 8 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 9 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: 900 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: > | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: CKG Sekolah | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: CKG Umum | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Cari/Daftarkan Individu | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Cek Kesehatan Gratis | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Jum | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Kam | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 2 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 3 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Klaster 4 | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Laki-laki | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Min | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Nomor Tiket | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Notifikasi Whatsapp | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Rab | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Sab | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Sarana Puskesmas | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Sel | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Sen | Placeholder: 
+[Setelah Cek NIK - Supardianto] Tag: span | ID: Tanpa ID | Text: Tatalaksana | Placeholder: 
+1. Analisis Teknologi yang Digunakan
+Berdasarkan struktur tag, atribut kelas CSS, dan pola interaksinya, aplikasi web CGK Kemenkes dibangun menggunakan tumpukan teknologi modern berbasis Single Page Application (SPA):
+
+Frontend Framework: Menggunakan Vue.js (terdeteksi dari penggunaan atribut reaktif internal seperti data-v-c600345d, data-v-0dd0c770, dan struktur komponen modular).
+
+CSS Framework / Utility: Memanfaatkan UnoCSS / Tailwind CSS (terdeteksi dari kelas penataan gaya seperti flex, grid, items-center, justify-between, rounded-lg, dan kode warna kustom).
+
+Komponen Pilihan Tanggal (Datepicker): Menggunakan pustaka pihak ketiga berbasis Vue seperti vue-datepicker atau mx-datepicker (terdeteksi melalui kelas .mx-datepicker dan .mx-input-wrapper).
+
+Manajemen State & Modal Interaktif: Menggunakan sistem overlay modal dinamis dengan tingkat kedalaman lapisan layar tinggi (z-index z-9000 dan kelas .modal-content) untuk menangani dropdown bertingkat.
+
+2. Pemetaan Elemen & Modul Utama
+Antarmuka pendaftaran terbagi menjadi beberapa modul elemen utama:
+
+Modul Navigasi Samping / Atas (Dashboard Header & Sidebar):
+
+Berisi tombol akses cepat modul klaster: Klaster 2, Klaster 3, Klaster 4.
+
+Modul layanan khusus: CKG Umum, CKG Sekolah, Sarana Puskesmas, Tatalaksana, Notifikasi Whatsapp, dan Cetak QR Screening.
+
+Identitas Pengguna: Menampilkan nama fasilitas/nakes (Rizki Wahyudi Puskesmas Sedau) dan tombol Keluar.
+
+Modul Utama Pencarian & Pendaftaran:
+
+Tombol utama: Daftar Baru (untuk memulai entri pasien baru).
+
+Kotak pencarian (input#searchNik / kolom tabel) untuk melacak nomor tiket dan status kunjungan.
+
+3. Alur Pendaftaran (Workflow) Step-by-Step
+Langkah Awal: Inisialisasi & Cek NIK
+Pengguna berada di halaman utama pendaftaran dan mengklik tombol Daftar Baru.
+
+Sistem membuka form input awal di mana pengguna memasukkan NIK (maksimal 16 karakter) pada elemen input#nik.
+
+Pengguna mengklik tombol Cek NIK.
+
+Jika data ditemukan di server Dukcapil: Sistem langsung menampilkan status "Data peserta valid" dan tombol Lanjutkan.
+
+Jika data kosong/undefined: Sistem memicu form manual Step 1 di mana data identitas dasar harus diisi.
+
+Langkah 1: Pengisian Data Identitas Dasar (Step 1)
+Input Text (input#Nama Lengkap & input#No Whatsapp): Digunakan untuk mengetikkan nama lengkap sesuai KTP serta nomor WhatsApp aktif (dengan awalan otomatis +62).
+
+Pilihan Tanggal Lahir (.mx-datepicker): Membuka modul kalender untuk memilih tanggal, bulan, dan tahun lahir.
+
+Dropdown Jenis Kelamin: Menggunakan komponen kustom berbasis Vue. Membuka popup modal untuk memilih opsi teks (misalnya: Laki-laki / Perempuan).
+
+Modul Kalender Jadwal Pemeriksaan (data-v-cdc79f1d):
+
+Menampilkan grid kalender bulanan (contoh: Sep 2026).
+
+Tombol tanggal menampilkan angka hari (1–31) disertai indikator kuota atau status (misalnya angka 900 atau titik hijau penanda tanggal aktif).
+
+Setelah lengkap, pengguna mengklik tombol Selanjutnya.
+
+Langkah 2: Pengisian Data Pendukung (Step 2 - Formulir Pendaftaran)
+Setelah melewati validasi awal, stepper berpindah ke Step 2 ("Isi data pendukung"). Elemen yang terlibat meliputi:
+
+Dropdown Bertingkat Kustom (Status Pernikahan, Disabilitas, Pekerjaan):
+
+Fungsi: Karena bukan elemen <select> HTML biasa, saat diklik akan memunculkan modal overlay (.modal-content dengan z-9000).
+
+Alur Interaksi: Modal menyediakan kolom pencarian teks (input placeholder="Cari pekerjaan"). Pengguna mengetik atau memilih dari daftar tombol pilihan (seperti Belum/Tidak Bekerja, Petani / Pekebun, Pegawai Swasta, dll) yang otomatis memfilter opsi di bawahnya.
+
+Checkbox / Pilihan Khusus (Misalnya: "Tidak punya NIK"):
+
+Fungsi: Mengubah status nilai boolean pada parameter noNik jika pasien tidak membawa atau memiliki NIK fisik.
+
+Textarea Detail Alamat Domisili (textarea#detail-domisili):
+
+Fungsi: Area teks multi-baris (rows="3", maksimal 60 karakter) untuk mencatat detail alamat spesifik (Contoh: Jl. Kenanga 14 no 92).
+
+Langkah Akhir: Konfirmasi & Eksekusi Tiket
+Setelah seluruh formulir Step 2 terisi lengkap, tombol Daftarkan yang sebelumnya berstatus bg-disabled (warna abu-abu, cursor-not-allowed) akan berubah menjadi aktif.
+
+Klik pada tombol Daftarkan akan mengirimkan payload data ke server Kemenkes.
+
+Pengguna diarahkan ke menu Pelayanan / Daftar Tiket untuk melakukan pencarian NIK, memvalidasi data pada baris tabel (tr), lalu mendapatkan Nomor Tiket resmi untuk proses skrining kesehatan lanjutan.

@@ -1,0 +1,21 @@
+{
+  "formAction": null,
+  "formClasses": "flex flex-col gap-y-5",
+  "allButtons": [
+    {
+      "text": "",
+      "type": "button",
+      "class": "border-none bg-transparent hover:bg-transparent focus:outline-none",
+      "ariaLabel": "btn-show-hide-password",
+      "outerHTML": "<button aria-label=\"btn-show-hide-password\" class=\"border-none bg-transparent hover:bg-transparent focus:outline-none\" type=\"button\"><svg data-v-c3ad5"
+    },
+    {
+      "text": "",
+      "type": "button",
+      "class": "cursor-pointer border-0 p-1",
+      "ariaLabel": null,
+      "outerHTML": "<button type=\"button\" class=\"cursor-pointer border-0 p-1\"><svg data-v-c3ad5561=\"\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/19"
+    }
+  ],
+  "captchaImgSrcPrefix": "data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQg"
+}

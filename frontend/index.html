@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CKG Automation Desktop - Sehat Indonesiaku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h2>CKG DESKTOP</h2>
+          <span>Puskesmas Automation</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="tab-dashboard">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          <span>Dashboard & Antrean</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-modules">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+          <span>Modul Skrining Klinis</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-browser">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span>Browser & Anti-Bot</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-logs">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="4 17 10 11 4 5"/>
+            <line x1="12" y1="19" x2="20" y2="19"/>
+          </svg>
+          <span>Terminal Real-Time</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-error-audit">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <span>Audit & Pembaca Error</span>
+          <span class="badge-error-count" id="error-badge-count" style="display: none;">0</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="stealth-badge">
+          <span class="pulse-indicator"></span>
+          <span>Stealth Active</span>
+        </div>
+        <div class="version-tag">v2.0.0 • PyWebView + Playwright</div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <!-- Top Action Bar -->
+      <header class="top-bar">
+        <div class="pipeline-stepper" id="pipeline-stepper">
+          <div class="step-node active" id="step-node-1" title="Langkah 1: Tabel Pasien & Tombol Mulai">
+            <span class="step-num">1</span>
+            <span class="step-label">Tabel Pasien</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-node" id="step-node-2" title="Langkah 2: Penjadwalan Kalender & Kuota">
+            <span class="step-num">2</span>
+            <span class="step-label">Kalender Kuota</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-node" id="step-node-3" title="Langkah 3: Deep Form Scraping & Injection">
+            <span class="step-num">3</span>
+            <span class="step-label">Injeksi Modul</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-node" id="step-node-4" title="Langkah 4: Finalisasi Rekam Medis">
+            <span class="step-num">4</span>
+            <span class="step-label">Selesaikan</span>
+          </div>
+        </div>
+
+        <div class="top-controls">
+          <button class="btn btn-primary btn-run" id="btn-run-all">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>JALANKAN OTOMASI</span>
+          </button>
+          <button class="btn btn-warning" id="btn-pause-pipeline" style="display: none;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <rect x="6" y="4" width="4" height="16"/>
+              <rect x="14" y="4" width="4" height="16"/>
+            </svg>
+            <span>Jeda</span>
+          </button>
+          <button class="btn btn-success" id="btn-resume-pipeline" style="display: none;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>Lanjutkan</span>
+          </button>
+          <button class="btn btn-danger" id="btn-stop-pipeline" style="display: none;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <rect x="5" y="5" width="14" height="14"/>
+            </svg>
+            <span>Hentikan</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- TAB 1: DASHBOARD & TABEL PASIEN -->
+      <section id="tab-dashboard" class="tab-pane active">
+        <!-- Stats Overview Cards -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-label">Total Antrean</span>
+            <h3 class="stat-val" id="stat-total">0</h3>
+            <span class="stat-sub" id="stat-file-name">Belum ada file Excel</span>
+          </div>
+          <div class="stat-card stat-success">
+            <span class="stat-label">Selesai Dilayani</span>
+            <h3 class="stat-val" id="stat-completed">0</h3>
+            <span class="stat-sub">Rekam Medis Tuntas</span>
+          </div>
+          <div class="stat-card stat-info">
+            <span class="stat-label">Siap / Pending</span>
+            <h3 class="stat-val" id="stat-ready">0</h3>
+            <span class="stat-sub">Menunggu Injeksi</span>
+          </div>
+          <div class="stat-card stat-warning">
+            <span class="stat-label">Distribusi Siklus</span>
+            <div class="stat-chips">
+              <span class="chip chip-balita" id="stat-balita">Balita: 0</span>
+              <span class="chip chip-dewasa" id="stat-dewasa">Dewasa: 0</span>
+              <span class="chip chip-lansia" id="stat-lansia">Lansia: 0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import Excel Box -->
+        <div class="card import-card">
+          <div class="card-header">
+            <h3>📁 Import Excel Pasien (Balita, Umum, Sekolah)</h3>
+            <div class="category-toggle">
+              <label><input type="radio" name="format-type" value="AUTO" checked> Auto-Detect</label>
+              <label><input type="radio" name="format-type" value="BALITA"> Balita</label>
+              <label><input type="radio" name="format-type" value="UMUM"> Umum</label>
+              <label><input type="radio" name="format-type" value="SEKOLAH"> Sekolah</label>
+            </div>
+          </div>
+          <div class="card-body dropzone-body">
+            <button class="btn btn-outline" id="btn-select-file">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <span>Pilih File Excel (.xlsx / .xls)</span>
+            </button>
+            <span class="dropzone-text" id="selected-path-text">Mendukung format Balita (dengan Wali), Dewasa/Lansia, dan CKG Sekolah</span>
+            <button class="btn btn-secondary btn-sm" id="btn-clear-queue">Bersihkan Antrean</button>
+          </div>
+        </div>
+
+        <!-- Interactive Patient Table -->
+        <div class="card table-card">
+          <div class="card-header">
+            <h3>📋 Tabel Pasien Pelayanan CKG</h3>
+            <div class="search-box">
+              <input type="text" id="search-patient" placeholder="Cari Nama / NIK / Tiket...">
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="patients-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Pasien</th>
+                  <th>Tanggal Lahir</th>
+                  <th>Nomor Tiket</th>
+                  <th>Nama Wali</th>
+                  <th>Siklus Hidup</th>
+                  <th>Klinis (BB/TB/TD)</th>
+                  <th>Pemeriksaan Mandiri</th>
+                  <th>Pelayanan</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="patients-tbody">
+                <tr class="empty-row">
+                  <td colspan="10">Belum ada data pasien. Silakan pilih file Excel terlebih dahulu.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: MODUL SKRINING KLINIS & SIKLUS HIDUP -->
+      <section id="tab-modules" class="tab-pane">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>🧬 Panel Kontrol Dinamis Modul Skrining</h3>
+              <p class="subtitle">Centang formulir yang ingin diinjeksi ke portal CKG & form.kemkes.go.id</p>
+            </div>
+            <div class="module-actions">
+              <button class="btn btn-sm btn-outline" id="btn-select-all-modules">Pilih Semua</button>
+              <button class="btn btn-sm btn-outline" id="btn-deselect-all-modules">Batal Semua</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- Filter by category pill -->
+            <div class="filter-pills" id="category-filter-pills">
+              <button class="pill active" data-filter="ALL">Semua Modul</button>
+              <button class="pill" data-filter="BALITA">Balita (0-5 Thn)</button>
+              <button class="pill" data-filter="DEWASA">Dewasa (18-59 Thn)</button>
+              <button class="pill" data-filter="LANSIA">Lansia (60+ Thn)</button>
+            </div>
+
+            <!-- Dynamic Module Grid -->
+            <div class="modules-grid" id="modules-container">
+              <!-- Dynamically populated by script.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: BROWSER & ANTI-BOT STEALTH -->
+      <section id="tab-browser" class="tab-pane">
+        <div class="card">
+          <div class="card-header">
+            <h3>🛡️ Playwright Browser Stealth & Sesi Login Kemenkes</h3>
+          </div>
+          <div class="card-body">
+            <div class="browser-status-panel">
+              <div class="status-indicator-box">
+                <div class="status-icon" id="login-status-icon">🔒</div>
+                <div>
+                  <h4 id="login-status-title">Status Login: Belum Terverifikasi</h4>
+                  <p id="login-status-desc">Pengguna memasukkan kredensial manual sekali di awal pada jendela Chromium.</p>
+                </div>
+              </div>
+
+              <div class="browser-actions">
+                <button class="btn btn-primary" id="btn-open-browser">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="10 8 16 12 10 16 10 8"/>
+                  </svg>
+                  <span>Buka Browser Playwright</span>
+                </button>
+                <button class="btn btn-outline" id="btn-goto-login">
+                  Buka Portal Login (sehatindonesiaku.kemkes.go.id)
+                </button>
+                <button class="btn btn-success" id="btn-check-login">
+                  Verifikasi Login Sekarang
+                </button>
+              </div>
+            </div>
+
+            <div class="stealth-details-grid">
+              <div class="stealth-info-card">
+                <h4>Argumen Anti-Bot Aktif</h4>
+                <ul>
+                  <li><code>--disable-blink-features=AutomationControlled</code></li>
+                  <li><code>navigator.webdriver = undefined</code></li>
+                  <li>Emulasi Profil User-Agent Manusia Alami</li>
+                  <li>Viewport 1366x768 (Full Screen Layout)</li>
+                </ul>
+              </div>
+              <div class="stealth-info-card">
+                <h4>Simulasi Interaksi Manusia (Human-Like Delays)</h4>
+                <ul>
+                  <li>Jeda acak pengetikan: <code>random.uniform(40ms, 120ms)</code></li>
+                  <li>Jeda waktu jeda klik / transisi SPA: <code>0.4 - 1.2 detik</code></li>
+                  <li>Penanganan event reaktif Vue/Nuxt.js (Input & Change Event)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: REAL-TIME TERMINAL & MONITOR -->
+      <section id="tab-logs" class="tab-pane">
+        <div class="card terminal-card">
+          <div class="card-header">
+            <div class="terminal-header-left">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">Console Output Real-Time (Python to JS Bridge)</span>
+            </div>
+            <button class="btn btn-sm btn-secondary" id="btn-clear-logs">Hapus Log</button>
+          </div>
+          <div class="terminal-screen" id="terminal-screen">
+            <div class="log-row info">
+              <span class="log-time">[00:00:00]</span>
+              <span class="log-badge info">INFO</span>
+              <span class="log-text">Sistem CKG Desktop Automation Assistant siap digunakan.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: AUDIT LOG ERROR & PEMBACA ERROR -->
+      <section id="tab-error-audit" class="tab-pane">
+        <div class="card error-audit-card">
+          <div class="card-header">
+            <div>
+              <h3>🔍 Audit Log Error & Pembaca Error Cerdas</h3>
+              <p class="subtitle">Memantau, mengklasifikasi, dan mendiagnosis galat teknis di seluruh lapisan sistem (Python, Browser, API, Excel, Pipeline)</p>
+            </div>
+            <div class="error-actions">
+              <button class="btn btn-sm btn-primary" id="btn-export-errors">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Ekspor Laporan Audit (.txt)</span>
+              </button>
+              <button class="btn btn-sm btn-secondary" id="btn-clear-error-audits">Bersihkan Audit</button>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- Filter Pills for Errors -->
+            <div class="filter-pills" id="error-filter-pills">
+              <button class="pill active" data-filter="ALL">Semua Error (<span id="count-all-errors">0</span>)</button>
+              <button class="pill" data-filter="PIPELINE_STEP">Pipeline CKG</button>
+              <button class="pill" data-filter="NETWORK_API">Jaringan & API</button>
+              <button class="pill" data-filter="BROWSER">Browser JS</button>
+              <button class="pill" data-filter="EXCEL_DATA">Validasi Excel</button>
+              <button class="pill" data-filter="PYTHON">Python Core</button>
+            </div>
+
+            <!-- Error List Container -->
+            <div class="error-audit-list" id="error-audit-list">
+              <div class="empty-error-state">
+                <div class="empty-icon">✓</div>
+                <h4>Tidak Ada Error Tercatat</h4>
+                <p>Seluruh sistem (Playwright, pipeline, Excel, dan komunikasi DOM) berjalan dengan normal tanpa galat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

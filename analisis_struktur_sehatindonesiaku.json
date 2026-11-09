@@ -1,0 +1,146 @@
+{
+  "target_url": "https://sehatindonesiaku.kemkes.go.id/",
+  "final_url": "https://sehatindonesiaku.kemkes.go.id/auth/login",
+  "status_code": 200,
+  "title": "Sehat Indonesiaku - Login",
+  "analysis": {
+    "inputs": [
+      {
+        "tag": "input",
+        "type": "text",
+        "id": "email",
+        "name": "Email",
+        "placeholder": "Masukkan email",
+        "className": "form-input border-gray-3 focus-within:border-black",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "tag": "input",
+        "type": "password",
+        "id": "password",
+        "name": "Kata sandi",
+        "placeholder": "Masukkan kata sandi",
+        "className": "form-input pr-10 border-gray-3 focus-within:border-black",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "id": "input-captcha",
+        "name": "Captcha",
+        "placeholder": "Masukkan captcha",
+        "className": "form-input border-gray-3 focus-within:border-black",
+        "disabled": false,
+        "value": ""
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "button",
+        "text": "",
+        "type": "button",
+        "id": "",
+        "className": "border-none bg-transparent hover:bg-transparent focus:outline-none",
+        "disabled": false
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "type": "button",
+        "id": "",
+        "className": "cursor-pointer border-0 p-1",
+        "disabled": false
+      }
+    ],
+    "links": [
+      {
+        "text": "Kirim aduan",
+        "href": "https://faq.kemkes.go.id/category/sehat-indonesiaku-asik"
+      }
+    ],
+    "nuxtConfig": {
+      "public": {
+        "apiBase": "https://api.kemkes.go.id/asik-pe-ik/v1/api",
+        "ageRestrictionRegisterCkg": false,
+        "dashboardGeneratorUrl": "https://dashboard-generator.kemkes.go.id",
+        "appEnv": "production",
+        "isMaintenance": false,
+        "localeDefault": "id",
+        "dataMigrationBukuPanduanUrl": "https://drive.google.com/file/d/1vZV6Saem12BcMOLk7ZsH8lgPO4NhNa6-/view?usp=sharing",
+        "satusehatDashboardUrl": "https://satusehat-dataviz.kemkes.go.id",
+        "docPanduanScreeningPkg": "https://docs.google.com/presentation/d/1opCM5Qd5eAB6h92jfFz8fmILcV584xOEWB_V_K3udxE/edit#slide=id.p",
+        "docQrScreeningPkg": "https://drive.google.com/file/d/1dZn3hGC30nusyqb5Yls6ukSeGDw3yozV/view?usp=sharing",
+        "urlWebviewReportCkg": "http://pkg.kemkes.go.id",
+        "urlDashboardCkgKehadiran": "https://dashboard-generator.kemkes.go.id/cek-kesehatan-gratis/kehadiran",
+        "urlDashboardCkgLayanan": "https://dashboard-generator.kemkes.go.id/cek-kesehatan-gratis/pelayanan",
+        "urlDashboardCkgPendaftaran": "https://dashboard-generator.kemkes.go.id/cek-kesehatan-gratis/pendaftaran",
+        "urlDashboardTatalaksanaRingkasan": "https://dashboard-generator.kemkes.go.id/tatalaksana/ringkasan",
+        "urlDashboardTatalaksanaMonev": "https://dashboard-generator.kemkes.go.id/tatalaksana/monev",
+        "cpid": "asik_web",
+        "ssmPublicKey": "",
+        "ssmPrivateKey": "",
+        "klaimSiswa": true,
+        "clientEncryptDecrypt": true
+      },
+      "app": {
+        "baseURL": "/",
+        "buildId": "b6b3ec38-f354-4bc9-bf31-bd29f288d798",
+        "buildAssetsDir": "/_nuxt/",
+        "cdnURL": ""
+      }
+    },
+    "containers": [
+      {
+        "id": "__nuxt",
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "id": "",
+        "tag": "main",
+        "className": ""
+      },
+      {
+        "id": "",
+        "tag": "div",
+        "className": "min-h-screen flex flex-col bg-white"
+      },
+      {
+        "id": "",
+        "tag": "div",
+        "className": "flex flex-col justify-between items-center w-full min-h-screen h-full"
+      },
+      {
+        "id": "",
+        "tag": "form",
+        "className": "flex flex-col gap-y-5"
+      },
+      {
+        "id": "",
+        "tag": "footer",
+        "className": "z-1000 text-sm text-[#565656] text-center my-4 px-4"
+      }
+    ]
+  },
+  "api_requests": [
+    {
+      "method": "GET",
+      "url": "https://sehatindonesiaku.kemkes.go.id/auth/login"
+    },
+    {
+      "method": "GET",
+      "url": "https://sehatindonesiaku.kemkes.go.id/api/user-management/captcha"
+    },
+    {
+      "method": "GET",
+      "url": "https://api.iconify.design/ph.json?icons=eye-closed-bold"
+    },
+    {
+      "method": "GET",
+      "url": "https://api.iconify.design/mdi.json?icons=reload"
+    }
+  ],
+  "screenshot": null
+}
