@@ -898,3 +898,16 @@ loadHardlockPekerjaanFromStorage();
 
 // Inisialisasi pengecekan lisensi saat sidepanel dimuat
 syncAuthUI();
+
+
+// Handler Buy Me Seblak -> Donate Here
+document.querySelectorAll("#btn-donate-header, #btn-donate-link").forEach(el => {
+  el?.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (typeof chrome !== "undefined" && chrome.tabs && chrome.tabs.create) {
+      chrome.tabs.create({ url: chrome.runtime.getURL("donate.html") });
+    } else {
+      window.open("donate.html", "_blank");
+    }
+  });
+});

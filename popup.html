@@ -53,6 +53,26 @@
     .btn:hover {
       opacity: 0.95;
     }
+    .donate-link-box {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed #cbd5e1;
+      text-align: center;
+    }
+    .donate-btn {
+      color: #e11d48;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .donate-btn:hover {
+      color: #be123c;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -65,7 +85,12 @@
   </p>
   <button class="btn" id="btn-open-sidepanel">▶ Buka Side Panel CKG</button>
 
+  <div class="donate-link-box">
+    <a href="donate.html" target="_blank" class="donate-btn" id="btn-donate-popup">
+      🍲 Buy Me Seblak &rarr; Donate Here
+    </a>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
-

@@ -68,6 +68,7 @@
   "web_accessible_resources": [
     {
       "resources": [
+        "donate.html",
         "templates_excel/*",
         "icons/*",
         "lib/*"

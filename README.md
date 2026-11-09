@@ -5,6 +5,7 @@
 [![Chrome Extension](https://img.shields.io/badge/Chrome_Extension-Manifest_V3-4285F4?logo=googlechrome&logoColor=white)](#)
 [![Kemenkes ASIK](https://img.shields.io/badge/Platform-SehatIndonesiaku_(ASIK)-0ea5e9)](#)
 [![License](https://img.shields.io/badge/License-Open_Access-green)](#)
+[![Buy Me Seblak](https://img.shields.io/badge/Donate-Buy_Me_Seblak_🍲-e11d48)](#-dukung-pengembang-buy-me-seblak--donate-here)
 [![Version](https://img.shields.io/badge/Version-3.0_Pendaftaran_Only-10b981)](#)
 
 ---
@@ -19,6 +20,7 @@
 7. [Format Excel & Standarisasi Data](#-format-excel--standarisasi-data)
 8. [Arsitektur & Struktur Direktori](#-arsitektur--struktur-direktori)
 9. [Troubleshooting & Solusi Kendala](#-troubleshooting--solusi-kendala)
+10. [Dukung Pengembang (Buy Me Seblak)](#-dukung-pengembang-buy-me-seblak--donate-here)
 
 ---
 
@@ -167,6 +169,7 @@ CKGPendaftaran/
 ├── manifest.json                  # Manifest Ekstensi V3 Chrome
 ├── popup.html / popup.js          # Jendela popup pembuka Side Panel
 ├── sidepanel.html / sidepanel.js  # Antarmuka utama Side Panel otomasi CKG
+├── donate.html                    # Halaman donasi (Buy Me Seblak -> Donate Here)
 ├── sidepanel.css / santai.css     # Tata letak & styling antarmuka UI
 ├── icons/                         # Ikon ekstensi (16px, 48px, 128px)
 ├── lib/
@@ -199,6 +202,21 @@ CKGPendaftaran/
 | **NIK terpotong / angka berakhiran 000** | Format kolom di Excel terbaca sebagai angka float (Scientific Number). | Gunakan format Text pada kolom NIK di Excel, atau gunakan fitur simpan template dari ekstensi. |
 | **Peserta Balita ditandai Error Wali** | Data NIK/Nama Wali pada balita tersebut kosong di file Excel. | Masukkan NIK salah satu orang tua / gunakan fitur pengaturan Hardlock Wali di ekstensi. |
 | **Browser melambat saat memproses ribuan data** | Terlalu banyak log pada terminal. | Klik tombol **Bersihkan** di pojok kanan atas kotak *Log Eksekusi Otomasi* untuk meringankan beban memori browser. |
+
+---
+
+## 🍲 Dukung Pengembang (Buy Me Seblak &bull; Donate Here)
+
+Aplikasi **CKGPendaftaran** disediakan **100% Gratis & Bebas Lisensi** untuk membantu operasional pelayanan rekan tenaga kesehatan di Puskesmas, Posyandu, dan Sekolah di seluruh Indonesia.
+
+Jika ekstensi ini menghemat waktu berjam-jam Anda dan mempermudah entri ribuan sasaran CKG, dukung pengembang agar tetap semangat merawat aplikasi ini dengan mentraktir seporsi **Seblak Pedas** via E-Wallet:
+
+| Saluran E-Wallet | Nomor Akun | A.n / Keterangan |
+|---|---|---|
+| **DANA** | `089530575124` | Dukungan Pengembang CKG |
+| **OVO** | `089530575124` | Dukungan Pengembang CKG |
+
+> 💖 **Terima kasih banyak atas segala dukungan, doa, dan apresiasi Anda untuk terus memajukan efisiensi layanan kesehatan primer Indonesia!**
 
 ---
 

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Me Seblak 🍲 - Dukung Pengembang CKGPendaftaran</title>
+  <link rel="icon" type="image/png" href="icons/icon48.png">
+  <style>
+    :root {
+      --primary: #e11d48;
+      --primary-hover: #be123c;
+      --dana-color: #118eea;
+      --ovo-color: #4c3494;
+      --bg: #fff1f2;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 50%, #f1f5f9 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 540px;
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px -15px rgba(225, 29, 72, 0.15), 0 0 1px rgba(0, 0, 0, 0.1);
+      border: 1px solid #fecdd3;
+      padding: 36px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #e11d48, #f43f5e, #fb7185, #fda4af);
+    }
+
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffe4e6;
+      color: #be123c;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      border: 1px solid #fecdd3;
+    }
+
+    .hero-icon {
+      font-size: 56px;
+      line-height: 1;
+      margin-bottom: 12px;
+      display: inline-block;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #881337;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+
+    .story-box {
+      background: #fff5f5;
+      border: 1px dashed #fda4af;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #4c0519;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .story-box b {
+      color: #9f1239;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #94a3b8;
+      margin-bottom: 14px;
+    }
+
+    .wallets-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .wallet-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1.5px solid #e2e8f0;
+      background: #f8fafc;
+      transition: all 0.2s ease;
+    }
+
+    .wallet-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .wallet-card.dana {
+      border-color: #bae6fd;
+      background: #f0f9ff;
+    }
+
+    .wallet-card.dana:hover {
+      border-color: var(--dana-color);
+    }
+
+    .wallet-card.ovo {
+      border-color: #ddd6fe;
+      background: #faf5ff;
+    }
+
+    .wallet-card.ovo:hover {
+      border-color: var(--ovo-color);
+    }
+
+    .wallet-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .wallet-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .wallet-card.dana .wallet-logo {
+      background: linear-gradient(135deg, #118eea 0%, #0073cc 100%);
+    }
+
+    .wallet-card.ovo .wallet-logo {
+      background: linear-gradient(135deg, #4c3494 0%, #351c75 100%);
+    }
+
+    .wallet-text h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wallet-number {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e293b;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .btn-copy {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-copy:hover {
+      background: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+
+    .btn-copy.copied {
+      background: #16a34a !important;
+      color: #ffffff !important;
+      border-color: #16a34a !important;
+    }
+
+    .instructions {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 12px;
+      color: #475569;
+      text-align: left;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .instructions ol {
+      margin-left: 18px;
+      margin-top: 6px;
+    }
+
+    .footer-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .btn-action {
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      border: none;
+    }
+
+    .btn-action-primary {
+      background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+      color: #ffffff;
+    }
+
+    .btn-action-primary:hover {
+      background: linear-gradient(135deg, #be123c 0%, #9f1239 100%);
+      transform: translateY(-1px);
+    }
+
+    .btn-action-outline {
+      background: #ffffff;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-action-outline:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+
+    .app-credit {
+      margin-top: 24px;
+      font-size: 11.5px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge-top">
+      <span>🍲</span> Support Developer &bull; Free &amp; Open Access
+    </div>
+
+    <div class="hero-icon">🍲</div>
+
+    <h1>Buy Me Seblak &bull; Donate Here</h1>
+    <p class="tagline">Traktir seporsi Seblak pedas untuk pengembang otomasi <b>CKGPendaftaran</b>.</p>
+
+    <div class="story-box">
+      <p>
+        Aplikasi <b>CKGPendaftaran</b> ini disediakan <b>100% GRATIS dan tanpa kunci lisensi berbayar</b> untuk seluruh rekan nakes, bidan, perawat, dan staf Puskesmas/Posyandu di Indonesia agar tidak perlu begadang input ribuan data secara manual.
+      </p>
+      <p style="margin-top: 8px;">
+        Jika ekstensi ini telah menghemat waktu, tenaga, dan kopi Anda di Puskesmas, Anda bisa mentraktir pengembang seporsi <b>Seblak Pedas</b> via E-Wallet di bawah ini agar kami selalu semangat melakukan pemeliharaan &amp; pembaruan aplikasi! ✨
+      </p>
+    </div>
+
+    <div class="section-title">Pilihan Saluran Donasi E-Wallet</div>
+
+    <div class="wallets-grid">
+      <!-- DANA CARD -->
+      <div class="wallet-card dana">
+        <div class="wallet-info">
+          <div class="wallet-logo" title="DANA">D</div>
+          <div class="wallet-text">
+            <h3>DANA</h3>
+            <div class="wallet-number" id="num-dana">089530575124</div>
+          </div>
+        </div>
+        <button type="button" class="btn-copy" data-target="089530575124" id="btn-copy-dana">
+          📋 Salin Nomor
+        </button>
+      </div>
+
+      <!-- OVO CARD -->
+      <div class="wallet-card ovo">
+        <div class="wallet-info">
+          <div class="wallet-logo" title="OVO">O</div>
+          <div class="wallet-text">
+            <h3>OVO</h3>
+            <div class="wallet-number" id="num-ovo">089530575124</div>
+          </div>
+        </div>
+        <button type="button" class="btn-copy" data-target="089530575124" id="btn-copy-ovo">
+          📋 Salin Nomor
+        </button>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <b>💡 Cara Donasi via DANA / OVO:</b>
+      <ol>
+        <li>Buka aplikasi <b>DANA</b> atau <b>OVO</b> pada ponsel Anda.</li>
+        <li>Pilih menu <b>Kirim</b> / <b>Transfer</b> ke Nomor HP.</li>
+        <li>Tempel (paste) nomor: <code style="background:#e2e8f0; padding:2px 5px; border-radius:4px; font-weight:700;">089530575124</code>.</li>
+        <li>Masukkan nominal keikhlasan Anda (misal seharga seporsi seblak Rp 10.000, Rp 20.000, dst).</li>
+        <li>Konfirmasi pengiriman. Terima kasih banyak atas dukungan tulus Anda! ❤️</li>
+      </ol>
+    </div>
+
+    <div class="footer-actions">
+      <button type="button" class="btn-action btn-action-outline" id="btn-close-page">
+        ✕ Tutup Halaman
+      </button>
+      <a href="https://github.com/krisnata/CKGPendaftaran" target="_blank" class="btn-action btn-action-primary">
+        ⭐ Bintang di GitHub
+      </a>
+    </div>
+
+    <div class="app-credit">
+      CKGPendaftaran &bull; Dedicated for Indonesian Primary Healthcare Workers
+    </div>
+  </div>
+
+  <script>
+    // Copy button interactivity
+    document.querySelectorAll(".btn-copy").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const num = btn.getAttribute("data-target") || "089530575124";
+        navigator.clipboard.writeText(num).then(() => {
+          const originalText = btn.innerHTML;
+          btn.innerHTML = "✓ Tersalin!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove("copied");
+          }, 2000);
+        }).catch(() => {
+          prompt("Salin nomor E-Wallet berikut:", num);
+        });
+      });
+    });
+
+    // Close button
+    document.getElementById("btn-close-page")?.addEventListener("click", () => {
+      window.close();
+    });
+  </script>
+</body>
+</html>
